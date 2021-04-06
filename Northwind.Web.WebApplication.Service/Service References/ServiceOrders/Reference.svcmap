@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2609fcfe-2910-485b-abda-f53b9aa6d2d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:18469/NorthwindService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NorthwindService.xsd" MetadataType="Schema" ID="565514be-2806-4f73-a6c6-52312a030431" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?xsd=xsd2" />
+    <MetadataFile FileName="NorthwindService.wsdl" MetadataType="Wsdl" ID="e78a350c-82f9-4cdc-89c8-a7238aad8026" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?wsdl" />
+    <MetadataFile FileName="NorthwindService1.xsd" MetadataType="Schema" ID="eaa4b81a-4659-4c80-b7b0-a9ad12dc1403" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?xsd=xsd1" />
+    <MetadataFile FileName="NorthwindService4.xsd" MetadataType="Schema" ID="9da704eb-d5ef-4bab-a4f7-4ca944408158" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?xsd=xsd4" />
+    <MetadataFile FileName="NorthwindService2.xsd" MetadataType="Schema" ID="1676eb1f-ce44-48b2-9acc-d6d53a7eed32" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?xsd=xsd3" />
+    <MetadataFile FileName="NorthwindService3.xsd" MetadataType="Schema" ID="6f5f7a75-ce97-444f-a116-56c4a2ac511e" SourceId="1" SourceUrl="http://localhost:18469/NorthwindService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

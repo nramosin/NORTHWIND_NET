@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NorthwindService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:18469/NorthwindService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:18469/NorthwindService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:18469/NorthwindService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Northwind.Entity.Service.Northwind.ListOfOrders" />
+      <xsd:import schemaLocation="http://localhost:18469/NorthwindService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Northwind.Entity.Service.Northwind.ListProductOrders" />
+      <xsd:import schemaLocation="http://localhost:18469/NorthwindService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Northwind.Entity.Service.Northwind.RegisterOfOrders" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INorthwindService_ListOfOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfOrders" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ListOfOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ListProductOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListProductOrders" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_ListProductOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListProductOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_RegisterOfOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterOfOrders" />
+  </wsdl:message>
+  <wsdl:message name="INorthwindService_RegisterOfOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterOfOrdersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INorthwindService">
+    <wsdl:operation name="ListOfOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/ListOfOrders" message="tns:INorthwindService_ListOfOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/ListOfOrdersResponse" message="tns:INorthwindService_ListOfOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListProductOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/ListProductOrders" message="tns:INorthwindService_ListProductOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/ListProductOrdersResponse" message="tns:INorthwindService_ListProductOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterOfOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/INorthwindService/RegisterOfOrders" message="tns:INorthwindService_RegisterOfOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INorthwindService/RegisterOfOrdersResponse" message="tns:INorthwindService_RegisterOfOrders_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INorthwindService" type="tns:INorthwindService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListOfOrders">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/ListOfOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListProductOrders">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/ListProductOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterOfOrders">
+      <soap:operation soapAction="http://tempuri.org/INorthwindService/RegisterOfOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NorthwindService">
+    <wsdl:port name="BasicHttpBinding_INorthwindService" binding="tns:BasicHttpBinding_INorthwindService">
+      <soap:address location="http://localhost:18469/NorthwindService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

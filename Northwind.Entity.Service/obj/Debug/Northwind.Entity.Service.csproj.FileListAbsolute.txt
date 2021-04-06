@@ -1,0 +1,5 @@
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\bin\Debug\Northwind.Entity.Service.dll
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\bin\Debug\Northwind.Entity.Service.pdb
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\obj\Debug\Northwind.Entity.Service.csprojResolveAssemblyReference.cache
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\obj\Debug\Northwind.Entity.Service.dll
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\obj\Debug\Northwind.Entity.Service.pdb

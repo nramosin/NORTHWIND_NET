@@ -1,0 +1,4 @@
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\bin\Release\Northwind.Entity.Service.dll
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\bin\Release\Northwind.Entity.Service.pdb
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\obj\Release\Northwind.Entity.Service.dll
+C:\NET\EXAMEN1-RAMOS-INOCENTE-NILTON\Northwind.Entity.Service\obj\Release\Northwind.Entity.Service.pdb

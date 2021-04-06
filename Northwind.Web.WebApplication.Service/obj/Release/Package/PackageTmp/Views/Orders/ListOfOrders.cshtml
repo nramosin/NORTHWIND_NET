@@ -1,0 +1,137 @@
+﻿
+@{
+    Layout = null;
+}
+
+<script src="~/Content/Lib/jquery-1.9.1.min.js"></script>
+<script src="~/Content/Lib/jquery.dataTables.min.js"></script>
+<script src="~/Content/Lib/jquery.dataTables.select.js"></script>
+<script src="~/Content/Lib/dataTables.bootstrap.min.js"></script>
+<script src="~/Content/Lib/jquery.blockUI.js"></script>
+<script src="~/Content/Lib/jquery.smartmenus.js"></script>
+<script src="~/Content/Lib/jquery.smartmenus.bootstrap.js"></script>
+<script src="~/Content/Lib/jquery.numeric.js"></script>
+<script src="~/Content/Lib/moment.js"></script>
+<script src="~/Content/Lib/bootstrap.js"></script>
+<script src="~/Content/Lib/respond.js"></script>
+<script src="~/Content/Lib/moment-es.js"></script>
+<script src="~/Content/Lib/bootstrap-datepicker.js"></script>
+<link href="~/Content/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="~/Content/css/jquery.dataTables.select.css" rel="stylesheet" />
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+
+<div id="ListOfOrders" class="container-fluid">
+    <div class="panel panel-default">
+        <div id="SeccDivtbOrdersList" class="panel-tabs panel-default" >
+            <div class="tab-pane fade active in" @*class="tab-pane active"*@>
+                <h5>Listado de Pedidos pendientes de conirmación  </h5>       
+            </div>
+
+            <div class="panel panel-body">
+                <div class="panel panel-default" style="padding:5px 15px;">
+                    <table id="divtbOrdersList" cclass="table table-striped table-hover">
+                        <thead class="claro-bg-primary">
+                            <tr>
+                                <th style="text-align: center; width: inherit;">Nro Orden</th>
+                                <th style="text-align: center; width: inherit;">Fecha</th>
+                                <th style="text-align: center; width: inherit;">Nombre/Razon Social</th>
+                                <th style="text-align: center; width: inherit;">Telefono</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="SeccDivtbProductsOrdersList" class="panel-tabs panel-default" >
+            <div class="tab-pane fade active in" @*class="tab-pane active"*@>
+                <h5>Confirmacion de Pedido</h5>
+                <div class="panel panel-body">
+                    <div class="panel panel-default" style="padding:5px 15px;">
+                        <form>
+                            <label class="col-form-label">Pedido</label>
+                            <label class="col-form-label" id="lblNroOrder"></label>
+                            <label>-</label>
+                            <label class="col-form-label" id="lblContactName"></label>
+                            <table id="divtbProductsOrdersList" cclass="table table-striped table-hover" style="width:100%">
+                                <thead class="claro-bg-primary">
+                                    <tr>
+                                        <th style="text-align: center; width: inherit;">Código</th>
+                                        <th style="text-align: center; width: inherit;">Descripción</th>
+                                        <th style="text-align: center; width: inherit;">Cantidad</th>
+                                        <th style="text-align: center; width: inherit;">Precio</th>
+                                        <th style="text-align: center; width: inherit;">Total</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <table style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <td>
+                                                    <div class="col-sm-6">
+                                                        <input type="date" class="form-control" id="txtDateConfirmation" />
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    
+                                                    <div class="col-sm-1">
+                                                        <input id="chkConfirm" type="checkbox" style="cursor: pointer" value="Marcado" />
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <label class=" control-label">Confirmado:</label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="col-sm-3"></div>
+                                                    <div class="col-sm-2">
+                                                        <label class="col-form-label">Total:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="txtTotal" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><br /><br /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-sm-2">
+                                                            <label class="col-form-label">Comentario:</label>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <textarea style="margin: 0px; width: 435px; height: 125px;" class="form-control" id="txtCommentary"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>                             
+                            </div>
+                        </form>
+                    </div>
+
+                        <div id="content" class="panel-body">
+                            <div class="">
+                                <center>
+                                    <div class="card">
+                                        <div class="card-header" style="cursor: pointer">
+                                            <button style="padding-left: 35px; padding-right: 35px; margin: 5px; width:150px; height: 30px; border-radius: 5px" class="btn claro-btn-info btn-sm" id="btnSave" type="button"><i class="glyphicon glyphicon-floppy-saved"></i>  Guardar</button>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/Scripts/ListOfOrders/ListOfOrders.js"></script>
+
